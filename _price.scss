@@ -1,0 +1,128 @@
+.price {
+    padding-bottom: 110px;
+&-list {
+    display:flex;
+    justify-content:space-between;
+    
+}
+&-item {
+    border: 1px solid $gray-border;
+    border-radius: 20px;
+    width: calc(100%/3 - 30px);
+    padding: 75px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.2s linear;
+    
+}
+
+&-item:hover {
+    border-color: transparent;
+    box-shadow: 0 0 50px 10px rgba(black,0.04);
+}
+&-item:hover .price-center {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: #fff;
+}
+
+&-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+&-cate {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $gray-border;
+}
+&-symbol {
+    vertical-align: top;
+}
+&-months {
+    font-weight: 600;
+    font-size: 50px;
+}
+&-desc {
+    margin-bottom: 55px;
+}
+
+&-features {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+&-features-item {
+    display: flex;
+    align-items: center;
+    color: $gray-blur;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+&-features-item:last-of-type {
+    margin-bottom: 75px;
+}
+&-features-icon {
+    font-size: 22px;
+    margin-right: 10px;
+   
+}
+
+&-center {
+    display: block;
+    width: max-content;
+    margin: auto auto 0;
+    transition: all 0.2s linear;
+}
+&-label {
+    position: absolute;
+    top: 0;
+    right: 0;  
+    padding: 15px; 
+    background-color: $pink-color;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 0 20px 0 20px;
+    font-size: 14px;
+}
+@media screen and (max-width: 1023px) {
+    padding-bottom: 80px;
+    &-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 450px;
+        grid-auto-flow: column;
+        grid-gap: 0 50px;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        grid-template-columns: unset;
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+          }
+        & > * {
+            scroll-snap-align: start;
+            width: 100%;
+
+           }
+        }
+    }
+
+    @media screen and (max-width: 479px) {
+        &-list {
+            grid-auto-columns: 80%;
+            
+        }
+    
+    }
+}
+
+

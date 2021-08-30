@@ -1,0 +1,182 @@
+// Ghi chú
+
+$gray-dark: #272e35;
+$gray-blur: #99A8BB;
+$gray-black: #6D747B;
+$gray-border: #F3F3F3;
+$primary-color: #579aff;
+$pink-color:#FF858D;
+$yellow-color:#FFCB46;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  overflow-x: hidden;
+  
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #fff;
+  color: $gray-dark;
+}
+.logo {
+  display: inline-block;
+}
+
+.bg {
+  &-gg {
+    background-color: #FF7979;
+  }
+  &-tw {
+    background-color: #79AFFF;
+  }
+  &-ig {
+    background-color: #FFB979;
+  }
+}
+
+.text {
+  font-weight: 300;
+  color: $gray-black;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//Button
+.btn {
+    display: inline-block;
+    border: 0;
+    font-size: 16px;
+    color: $gray-dark;
+    padding: 20px 45px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    line-height: normal;
+    &--primary {
+        color: #fff;
+        background-color: $primary-color;
+    }
+    &--outline {
+      border: 1px solid;
+      color: #99A8BB;
+    }
+}
+
+//Block
+.block {
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 85px;
+  &-caption {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 0 10px;
+    color: $gray-black;
+}
+  &-caption::before{
+    left: 0;
+    transform: translateX(-100%) translateY(-50%);
+
+  }
+  &-caption::after{
+    right:  0;
+    transform: translateX(100%) translateY(-50%);
+
+  }
+  &-caption::before,
+  &-caption::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 30px;
+    top: 50%;
+    background-color: $primary-color;
+  }
+  &-caption--left{
+    padding-left: 40px;
+    margin-bottom: 30px;
+  }
+  &-caption--left:after {
+    display: none;
+  }
+  &-caption--left:before {
+    transform: none;
+  }
+  &-heading {
+    line-height: 1.4;
+    font-size: 55px;
+    font-weight: 600;
+    span {
+      display: block;
+    }
+  }
+
+}
+
+@import "header";
+@import "banner";
+@import "works";
+@import "intro";
+@import "price";
+@import "client";
+@import "started";
+@import "footer";
+
+
+
+
+@media screen and (max-width: 767px) {
+    .btn {
+      padding: 10px 20px;
+    }
+    .block {
+      margin-bottom: 50px;
+    
+      &-heading {
+        font-size: 35px;
+      }
+      &-caption {
+        margin-bottom: 20px;
+      }
+    }
+}
+
+
+
+
+
